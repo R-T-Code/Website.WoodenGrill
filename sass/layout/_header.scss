@@ -1,0 +1,46 @@
+.header{
+    @include max-width;
+    height: 95vh;
+    background-image: url(../img/back8.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &__name{
+        color: $color-one;
+        position: absolute;
+        font-size: 14rem;
+        filter: drop-shadow(2px 2px 2px $color-four);
+
+        &--1{
+            top: 24%;
+            left: 10%;
+        }
+        &--2{
+            top: 44%;
+            left: 30%;
+        }
+        &--3{
+            top: 64%;
+            left: 70%;
+
+            @media only screen and (max-width: 1100px){
+                left: 69%;
+            }
+        }
+
+        @media only screen and (max-width: 1250px){
+            font-size: 12rem;
+        }
+        @media only screen and (max-width: 1100px){
+            font-size: 11rem;
+        }
+        @media only screen and (max-width: 1000px){
+            font-size: 10rem;
+        }
+        @media only screen and (max-width: 920px){
+            font-size: 9rem;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.navigation{
+    @include max-width;
+    width: 100%;
+    background-color: $color-one;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    border-bottom: 1px solid $color-four;
+    transform: translate(-50%, 0%);
+    transition: transform .4s ease-in;
+
+
+
+    &__text{
+        color: $color-four;
+        display: inline-block;
+        font-size: $font-size-big;
+        padding: 2rem 1rem;
+        &::after{
+            content: '...';
+            color: $color-four;
+            opacity: 0;
+            transition: all .4s;
+        }
+        &:hover{
+            cursor: pointer;
+            &::after{
+                opacity: 1;
+            }
+        }
+        @media only screen and (max-width: 950px){
+            font-size: 2.6rem;
+            padding: 2rem .4rem;
+        }
+        @media only screen and (max-width: 800px){
+            font-size: 2rem;
+            padding: 2rem .4rem;
+        }
+        @media only screen and (max-width: 600px){
+
+        }
+    }
+}

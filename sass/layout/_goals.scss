@@ -1,0 +1,40 @@
+.goals{
+    @include max-width;
+    height: 20vh;
+    background-color: $color-one;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid $color-four;
+    &__text{
+        color: $color-four;
+        font-size: $font-size-big;
+        margin: auto;
+        &--up{
+            border-top: 1px solid $color-four;
+            height: 30rem;
+            position: absolute;
+            padding: 2rem 4rem;
+            background-color: $color-one;
+            left: 10rem;
+            top: -16rem;
+            border-radius: 0 6rem 0 0;
+        }
+
+        &--middle{
+            @include center;
+            width: 100%;
+        }
+
+        &--down{
+            height: 24rem;
+            position: absolute;
+            padding: 1rem 4rem;
+            background-color: $color-one;
+            right: 10rem;
+            bottom: -20rem;
+            border-radius: 0 0 0 6rem;
+            border-bottom: 1px solid $color-four;
+            z-index: 100;
+        }
+    }
+}
